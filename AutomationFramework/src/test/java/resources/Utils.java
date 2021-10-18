@@ -15,14 +15,30 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class Utils {
-public static RequestSpecification req;
+
+	public static RequestSpecification req;
+	public static final String pathName = "C:\\\\Users\\\\Suren\\\\git\\\\repository\\\\APIAutomation\\\\AutomationFramework\\\\src\\\\test\\\\java\\\\resources\\\\global.properties";
 	
+	//Method to extract the values from global.properties
+	public static String getGlobalValues(String key) throws IOException {
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream(pathName);
+		prop.load(fis);
+		return prop.getProperty(key);		
+		}
+		
+	public String getJsonPath(Response response, String key) {
+		String resp = response.asString();
+	    JsonPath js = new JsonPath(resp);
+	    return js.get(key).toString();
+		}
+		
 	public RequestSpecification requestSpecification() throws IOException {
 		
-		if(req==null)
+		if(null==req)
 		{
 		PrintStream log = new PrintStream(new FileOutputStream("logging.txt"));
-		RequestSpecification req = new RequestSpecBuilder().setBaseUri(getGlobalValues("baseUrl"))		    
+		req = new RequestSpecBuilder().setBaseUri(getGlobalValues("baseUrl"))		    
 	    		.addFilter(RequestLoggingFilter.logRequestTo(log))
 	    		.addFilter(ResponseLoggingFilter.logResponseTo(log))
 				.setContentType(ContentType.JSON).build();
@@ -30,20 +46,6 @@ public static RequestSpecification req;
 	    return req;
 		}
 		return req;
-	}
-	
-	//Method to extract the values from global.properties
-	public static String getGlobalValues(String key) throws IOException {
-		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream("C:\\Users\\Suren\\Automation\\AutomationFramework\\src\\test\\java\\resources\\global.properties");
-		prop.load(fis);
-		return prop.getProperty(key);		
-	}
-	
-	public String getJsonPath(Response response, String key) {
-		String resp = response.asString();
-	    JsonPath js = new JsonPath(resp);
-	    return js.get(key).toString();
-	}
+	}	
 
 }

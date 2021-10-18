@@ -23,6 +23,7 @@ import resources.Utils;
 import static io.restassured.RestAssured.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -47,13 +48,13 @@ public class StepDefinition extends Utils{
 		reqSpec = given().spec(requestSpecification()).body(data.posttApiPayload(userId,id,title));
 		
 	}
+		
 	@When("user calls {string} with {string} http method")
 	public void user_calls_with_http_method(String resource, String method) {
 		
 		APIResources resourceAPI = APIResources.valueOf(resource);
 		
-		if(method.equalsIgnoreCase("POST"))		
-			//response = reqSpec.when().post(resourceAPI.getResource()).then().spec(resSpec).extract().response();
+		if(method.equalsIgnoreCase("POST"))					
 			response = reqSpec.when().post(resourceAPI.getResource());
 		else if(method.equalsIgnoreCase("GET"))
 			response = reqSpec.when().get(resourceAPI.getResource());
@@ -131,6 +132,15 @@ public class StepDefinition extends Utils{
 			assertNotNull(retrieveDetails.get(i).getId());
 			assertNotNull(retrieveDetails.get(i).getTitle());
 		}
+	}
+	
+	@Then("the {string} response body should be {string}")
+	public void the_response_body_should_be(String userId, String keyValue) {
+		List<GetResourcesDetails> retrieveDetails = data.retrieveDetails(response);
+		for(int i=0; i<retrieveDetails.size(); i++)
+		{			
+			assertNull(retrieveDetails);			
+		}	
 	}
 }
 	
