@@ -1,3 +1,2 @@
 # APIAutomation
-# To view cucumber-html-report copy the below Uri and paste it in the explorer
-# C:\Users\Suren\git\repository\APIAutomation\AutomationFramework\target\cucumber-html-reports\cucumber-html-report.html
+# Have attached the cucumber report in the Test Summary as well in the email
