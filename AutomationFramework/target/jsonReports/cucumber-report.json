@@ -1,0 +1,1062 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2021-10-18T09:44:47.696Z",
+        "line": 6,
+        "name": "Verify getting success response and retreiving the resources when hitting Get API",
+        "description": "",
+        "id": "validating-post-api-s-using-get-method;verify-getting-success-response-and-retreiving-the-resources-when-hitting-get-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1311248600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"GetResource API\" Validation",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetResource API\"",
+                  "offset": 0
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.validation(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1462160800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user calls \"PostAPI\" with \"Get\" http method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PostAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Get\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_with_http_method(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 14989800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the API call got Success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 215875300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the retrieved records size should be 100",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 37
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_retrieved_records_size_should_be(java.lang.Integer)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-18T09:44:50.799Z",
+        "line": 13,
+        "name": "Verify getting success response and retreiving the comments when hitting Get API",
+        "description": "",
+        "id": "validating-post-api-s-using-get-method;verify-getting-success-response-and-retreiving-the-comments-when-hitting-get-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2998000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "\"Retrieve Comments\" Validation",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Retrieve Comments\"",
+                  "offset": 0
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.validation(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 126928100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user calls \"Comments\" with \"Get\" http method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Comments\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Get\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_with_http_method(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the API call got Success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4997300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the fields in response body should not be NULL",
+            "match": {
+              "location": "stepDefinitions.StepDefinition.the_fields_in_response_body_should_not_be_null()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-18T09:44:50.961Z",
+        "line": 27,
+        "name": "Verify getting success response and retreiving the albums based on the User ID when hitting Get API",
+        "description": "",
+        "id": "validating-post-api-s-using-get-method;verify-getting-success-response-and-retreiving-the-albums-based-on-the-user-id-when-hitting-get-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 8995700,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "\"Retrieve Albums based on User ID\" Validation for the userId \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Retrieve Albums based on User ID\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 61
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.validation_for_the_user_id(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 689961700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user calls \"Albums\" with \"Get\" http method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Albums\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Get\"",
+                  "offset": 25
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_with_http_method(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 999900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the API call got Success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9994500,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the \"userId\" in response body should be \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"userId\"",
+                  "offset": 4
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_in_response_body_should_be(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-18T09:44:51.697Z",
+        "line": 28,
+        "name": "Verify getting success response and retreiving the albums based on the User ID when hitting Get API",
+        "description": "",
+        "id": "validating-post-api-s-using-get-method;verify-getting-success-response-and-retreiving-the-albums-based-on-the-user-id-when-hitting-get-api;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2997100,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "\"Retrieve Albums based on User ID\" Validation for the userId \"8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Retrieve Albums based on User ID\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"8\"",
+                  "offset": 61
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.validation_for_the_user_id(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 687308200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user calls \"Albums\" with \"Get\" http method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Albums\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Get\"",
+                  "offset": 25
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_with_http_method(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 972900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the API call got Success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9984200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the \"userId\" in response body should be \"8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"userId\"",
+                  "offset": 4
+                },
+                {
+                  "val": "\"8\"",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_in_response_body_should_be(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-18T09:44:52.415Z",
+        "line": 39,
+        "name": "Verify getting success response and retreiving the details based on the User ID when hitting Get API",
+        "description": "",
+        "id": "validating-post-api-s-using-get-method;verify-getting-success-response-and-retreiving-the-details-based-on-the-user-id-when-hitting-get-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000600,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "\"Retrieve details based on User ID\" Validation for the userId \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Retrieve details based on User ID\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 62
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.validation_for_the_user_id(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 101987300,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user calls \"PostAPI\" with \"Get\" http method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PostAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Get\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_with_http_method(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the API call got Success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5996700,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "the \"userId\" in response body for retrieving post API should be \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"userId\"",
+                  "offset": 4
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 64
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_in_response_body_for_retrieving_post_api_should_be(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-18T09:44:52.544Z",
+        "line": 40,
+        "name": "Verify getting success response and retreiving the details based on the User ID when hitting Get API",
+        "description": "",
+        "id": "validating-post-api-s-using-get-method;verify-getting-success-response-and-retreiving-the-details-based-on-the-user-id-when-hitting-get-api;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5995900,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "\"Retrieve details based on User ID\" Validation for the userId \"8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Retrieve details based on User ID\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"8\"",
+                  "offset": 62
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.validation_for_the_user_id(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 669718000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user calls \"PostAPI\" with \"Get\" http method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PostAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Get\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_with_http_method(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 979400,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the API call got Success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2999400,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "the \"userId\" in response body for retrieving post API should be \"8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"userId\"",
+                  "offset": 4
+                },
+                {
+                  "val": "\"8\"",
+                  "offset": 64
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_in_response_body_for_retrieving_post_api_should_be(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Validating Post API\u0027s using GET Method",
+    "description": "",
+    "id": "validating-post-api-s-using-get-method",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/getAPI.feature",
+    "tags": []
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2021-10-18T09:44:53.233Z",
+        "line": 15,
+        "name": "Verify getting success response and retreiving the albums based on the User ID when hitting Get API",
+        "description": "",
+        "id": "validating-the-negative-scenarios;verify-getting-success-response-and-retreiving-the-albums-based-on-the-user-id-when-hitting-get-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1998900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"Retrieve Albums based on User ID\" Validation for the userId \"$%%%\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Retrieve Albums based on User ID\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"$%%%\"",
+                  "offset": 61
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.validation_for_the_user_id(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 111935600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user calls \"Albums\" with \"Get\" http method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Albums\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Get\"",
+                  "offset": 25
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_with_http_method(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the API call got Success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1997700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the \"userId\" response body should be \"$%%%\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"userId\"",
+                  "offset": 4
+                },
+                {
+                  "val": "\"$%%%\"",
+                  "offset": 37
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_response_body_should_be(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative"
+          }
+        ]
+      }
+    ],
+    "name": "Validating the Negative Scenarios",
+    "description": "",
+    "id": "validating-the-negative-scenarios",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/negativeScenarios.feature",
+    "tags": []
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2021-10-18T09:44:53.359Z",
+        "line": 15,
+        "name": "Verify getting success response and creating the resource when hitting Posts API",
+        "description": "",
+        "id": "validating-posts-api-s;verify-getting-success-response-and-creating-the-resource-when-hitting-posts-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 59965500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Posts API Payload with \"1\" \"101\" \"Testing with ID 101\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"101\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"Testing with ID 101\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.posts_api_payload_with(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 731608200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user calls \"PostAPI\" with \"Post\" http method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PostAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Post\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_with_http_method(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3998000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the API call got Success with status code 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 958688000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "\"title\" in response body is \"Testing with ID 101\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"title\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"Testing with ID 101\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateResource"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-18T09:44:55.135Z",
+        "line": 18,
+        "name": "Verify getting success response and deleting the resource when hitting Delete API",
+        "description": "",
+        "id": "validating-posts-api-s;verify-getting-success-response-and-deleting-the-resource-when-hitting-delete-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1997900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "\"DeleteAPI\" Validation",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DeleteAPI\"",
+                  "offset": 0
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.validation(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 654137900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user calls \"AmendAPI\" with \"Delete\" http method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AmendAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Delete\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_with_http_method(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 999100,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the API call got Success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeleteResource"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-18T09:44:55.801Z",
+        "line": 32,
+        "name": "Verify getting success response and update the payload when hitting PUT API",
+        "description": "",
+        "id": "validating-posts-api-s;verify-getting-success-response-and-update-the-payload-when-hitting-put-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6995400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "PUTAPI Validation \"1\" \"101\" \"Testing with ID 101\" \"Testing Put\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"101\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Testing with ID 101\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Testing Put\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.putapi_validation(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 650613700,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user calls \"AmendAPI\" with \"Put\" http method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AmendAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Put\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_with_http_method(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 998100,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the API call got Success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 28971700,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "\"body\" in response body is \"Testing Put\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"body\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"Testing Put\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UpdateResource"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-18T09:44:56.496Z",
+        "line": 43,
+        "name": "Verify getting success response and update the payload when hitting API with PATCH method",
+        "description": "",
+        "id": "validating-posts-api-s;verify-getting-success-response-and-update-the-payload-when-hitting-api-with-patch-method;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 17988700,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "PostAPI Validation \"Testing for Patch\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Testing for Patch\"",
+                  "offset": 19
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.post_api_validation(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 648356600,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "user calls \"AmendAPI\" with \"Patch\" http method",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AmendAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Patch\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_calls_with_http_method(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 999600,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "the API call got Success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 13991600,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "\"title\" in response body is \"Testing for Patch\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"title\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"Testing for Patch\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PatchResource"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Posts API\u0027s",
+    "description": "",
+    "id": "validating-posts-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/posts.feature",
+    "tags": []
+  }
+]
